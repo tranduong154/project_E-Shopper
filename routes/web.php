@@ -18,6 +18,7 @@ use App\Http\Controllers\FontEnd\AddproductController;
 use App\Http\Controllers\FontEnd\ShopController;
 use App\Http\Controllers\FontEnd\CheckoutController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\Shop\VNPAYController;
 /*ShopController
 |--------------------------------------------------------------------------
 | Web Routes
@@ -146,3 +147,6 @@ Route::post('/fontend/home/search', [App\Http\Controllers\FontEnd\TrangChuContro
 
 ////////mail
 Route::get('/test', [App\Http\Controllers\MailController::class, 'index']);
+
+//////VNpay
+Route::post('/vnpayy', [App\Http\Controllers\Shop\VNPAYController::class, 'vnpay_payment']);

@@ -58,13 +58,13 @@ class BlogController extends Controller
     public function cmt(RequestCmt $request , $id)
     {
         $id_user = Auth::id();
-        $userr = Admin::findOrFail($id_user)->get()->toArray();
+        $userr = Admin::findOrFail($id_user)->toArray();
         // dd($userr);
         $message = $request->message;
         $id_blog = $id;
-        $name =  $userr[0]['name'];
+        $name =  $userr['name'];
         // echo $name;
-        $avatar =  $userr[0]['avatar'];
+        $avatar =  $userr['avatar'];
         //  dd($avatar);
 
         DB:: table('binhluann')->insert([
@@ -81,13 +81,13 @@ class BlogController extends Controller
     {
         // echo $lv;
         $id_user = Auth::id();
-        $userr = Admin::findOrFail($id_user)->get()->toArray();
+        $userr = Admin::findOrFail($id_user)->toArray();
         // dd($userr);
         $message = $request->message;
         $id_blog = $id;
-        $name =  $userr[0]['name'];
+        $name =  $userr['name'];
         // echo $name;
-        $avatar =  $userr[0]['avatar'];
+        $avatar =  $userr['avatar'];
         //  dd($avatar);
         $lv = $request->level;
         DB:: table('binhluann')->insert([
