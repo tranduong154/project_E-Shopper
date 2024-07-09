@@ -31,12 +31,6 @@ use App\Http\Controllers\Shop\VNPAYController;
 */
 
 Auth::routes();
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Route::get('/cauthu/list', [App\Http\Controllers\CauuthuController::class, 'index']);
-
-// Route::get('/demo', [App\Http\Controllers\DemoController::class, 'index']);
-
 
 // khi làm form thì luôn có 2 router giong nhau
 
